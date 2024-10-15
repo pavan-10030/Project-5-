@@ -1,0 +1,619 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f2e2e;
+    padding: 20px;
+}
+
+.logo a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo a span{
+    color:red;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin:0 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    color: #918760;
+    text-decoration: underline;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center; /* Center the input and button */
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    width: 200px; /* Fixed width */
+    margin-right: 5px; /* Space between input and button */
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #e74c3c; /* Button color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #c0392b; /* Darker color on hover */
+}
+/* Burger menu styling (hidden by default) */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .search-container {
+        display: none; /* Smaller width for search bar */
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    /* Burger animation */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.homecontent {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.homecontent h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.homecontent p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .homecontent {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .homecontent h1 {
+        font-size: 28px;
+    }
+
+    .homecontent p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background-color: #d4cbcb;
+    gap: 50px;
+    min-height: 50vh;
+}
+
+h2 span{
+    color:red;
+}
+
+.aboutcontent {
+    
+    max-width: 600px;
+}
+
+.aboutcontent h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    
+}
+
+
+
+
+/* Section Heading */
+.food-items-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.food-items-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Food Cards Container */
+.food-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Individual Food Card */
+.food-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* 3 cards per row */
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Food Image */
+.food-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Food Info */
+.food-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.food-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Rating Section */
+.rating {
+    font-size: 18px;
+    color: #e74c3c; /* Star color */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .food-card {
+        width: calc(50% - 20px); /* 2 cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .food-card {
+        width: 100%; /* 1 card per row on smaller screens */
+    }
+}
+
+
+/* Order Menu Section Styling */
+.order-menu-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff; /* Background color for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.section-heading {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.order-btn {
+    background-color: #e74c3c; /* Red color for Order Now button */
+}
+
+.menu-btn {
+    background-color: #3498db; /* Blue color for View Menu button */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.order-btn:hover {
+    background-color: #c0392b; /* Darker shade for hover effect */
+}
+
+.menu-btn:hover {
+    background-color: #2980b9; /* Darker shade for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 28px; /* Smaller font size for heading */
+    }
+
+    .btn {
+        font-size: 16px; /* Smaller font size for buttons */
+        padding: 12px 24px; /* Smaller padding for buttons */
+    }
+}
+
+.restaurants-near-you {
+    padding: 20px;
+}
+
+.restaurants-near-you h2{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #333;
+}
+.restaurant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Card Styling */
+.restaurant-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-content p {
+    color: #777;
+    margin: 10px 0;
+}
+
+.rating {
+    color: #FFD700; /* Gold for star rating */
+    font-size: 1.2rem;
+}
+
+.card-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3498db; /* Icon color */
+}
+
+.card-icons i {
+    margin-right: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .restaurant-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurant-card {
+        width: 90%; /* Full-width on small screens */
+    }
+}
+
+.footer {
+    background-color: #2f2e2e;
+    color: #ecf0f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Brand Section */
+.footer-brand {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-brand h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    
+}
+
+.footer-brand h3 span{
+    color:red;
+}
+
+
+.footer-brand p {
+    font-size: 1.1rem;
+    color: #bdc3c7;
+}
+
+/* Social Media Section */
+.footer-social {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #918760;
+}
+
+
+/* Copyright Section */
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #95a5a6;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand, .footer-social{
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshEats - Online Food Delivery </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            
+            <a href="#">Fresh<span>Eats</span></a>
+        </div>
+
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#fooditems">Explore</a></li>
+            <li><a href="logipage.html">Login</a></li>
+            
+        </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="burger" id="burger" onclick="toggleNav()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!--Home Section  -->
+    <section class="home-section" id="home">
+        <div class="homecontent">
+            <h1>Delicious Food Delivered to Your Doorstep</h1>
+            <p>
+                Explore a wide range of cuisines from your favorite local restaurants. Quick, easy, and delivered right to your door.
+            </p>
+            <a href="#order-now" class="cta-button">Order Now</a>
+        </div>
+        <div class="image-container">
+            <img src="bannerimg.jpg" alt="Food Delivery" />
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <hr>
+
+    <!-- Order -->
+    <section class="order-menu-section">
+        <h2 class="section-heading">Ready to Satisfy Your Cravings?</h2>
+        <div class="button-container">
+            <a href="#order" class="btn order-btn">Order Now</a>
+            <a href="foodmenu.html" class="btn menu-btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        
+            <div class="aboutcontent">
+                <h2>About Fresh<span>Eats</span></h2>
+            </div>
+            <p>
+                We bring your favorite meals from local restaurants straight to your door, quickly and conveniently. Whether you're craving a quick lunch or a gourmet dinner, we make sure you enjoy delicious food without the hassle of cooking or driving to the restaurant. 
+           
+                 <br>Explore our platform today and discover the best meals your city has to offer!
+            </p>
+        
+        
+    </section>
+
+    
+   
+
+    <!-- Restaurants near you -->
+    <section class="restaurants-near-you">
+        <h2>Restaurants Near You</h2>
+        <div class="restaurant-cards">
+            <!-- Restaurant Card 1 -->
+            <div class="restaurant-card">
+                <img src="r2.jpg" alt="Restaurant 1">
+                <div class="card-content">
+                    <h3>Spice Villa</h3>
+                    <p>Indian Cuisine</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.5
+                    </div>
+                    <div class="card-icons">
+                        <i class="fas fa-motorcycle"></i> Delivery
+                        <i class="fas fa-phone"></i> Call
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 2 -->
+            <div class="restaurant-card">
+                <img src="r3.jpg" alt="Restaurant 2">
+                <div class="card-content">
+                    <h3>Pasta Place</h3>
+                    <p>Italian Cuisine</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.2
+                    </div>
+                    <div class="card-icons">
+                        <i class="fas fa-motorcycle"></i> Delivery
+                        <i class="fas fa-phone"></i> Call
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more restaurant cards as needed -->
+            <div class="restaurant-card">
+                <img src="r4.jpg" alt="Restaurant 2">
+                <div class="card-content">
+                    <h3>Venue 24</h3>
+                    <p>Indian Cuisine</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.4
+                    </div>
+                    <div class="card-icons">
+                        <i class="fas fa-motorcycle"></i> Delivery
+                        <i class="fas fa-phone"></i> Call
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="r1.jpg" alt="Restaurant 1">
+                <div class="card-content">
+                    <h3>Grill Restro</h3>
+                    <p>Multi Cuisine</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.1
+                    </div>
+                    <div class="card-icons">
+                        <i class="fas fa-motorcycle"></i> Delivery
+                        <i class="fas fa-phone"></i> Call
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="r5.jpg" alt="Restaurant 1">
+                <div class="card-content">
+                    <h3>WhiteFox Lounge</h3>
+                    <p>Multi  Cuisine</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 4.5
+                    </div>
+                    <div class="card-icons">
+                        <i class="fas fa-motorcycle"></i> Delivery
+                        <i class="fas fa-phone"></i> Call
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Food Items  -->
+    <section class="food-items-section" id="fooditems">
+        <h2>Our Popular Food Items</h2>
+        <div class="food-items-container">
+            <!-- Card 1 -->
+            <div class="food-card">
+                <img src="dosa.jpg" alt="Dosa" class="food-image">
+                <div class="food-info">
+                    <h3>Spicy Dosa</h3>
+                    <p>Crispy crust with melted cheese and fresh toppings.</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="food-card">
+                <img src="idly.jpg" alt="Idly Sambar" class="food-image">
+                <div class="food-info">
+                    <h3>Idly Sambar</h3>
+                    <p>Soft and smooth idly with spicy sambar.</p>
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="food-card">
+                <img src="pasta.jpg" alt="Pasta" class="food-image">
+                <div class="food-info">
+                    <h3>Creamy Pasta</h3>
+                    <p>Rich and creamy Alfredo sauce with garlic and herbs.</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+            <!-- More food items can be added here -->
+            <div class="food-card">
+                <img src="vada.jpg" alt="Pasta" class="food-image">
+                <div class="food-info">
+                    <h3>Crunchy Vada</h3>
+                    <p>Crispy and savory.</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-card">
+                <img src="thalli.jpg" alt="Andhra Thali" class="food-image">
+                <div class="food-info">
+                    <h3>Andhra Thali</h3>
+                    <p>Delicious Andhra thali</p>
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="chickenbiryani.jpg" alt="Pasta" class="food-image">
+                <div class="food-info">
+                    <h3>Biryani</h3>
+                    <p>Hyderabadi Chicken Biryani</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="frenchfries.jpg" alt="Pasta" class="food-image">
+                <div class="food-info">
+                    <h3>French Fries</h3>
+                    <p>Tasty French Fries</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-card">
+                <img src="veggie tacos.jpg" alt="Pasta" class="food-image">
+                <div class="food-info">
+                    <h3>Veggie Tacos</h3>
+                    <p>Crispy and delicious.</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Brand Name Section -->
+            <div class="footer-brand">
+                <h3>Fresh<span>Eats</span></h3>
+                <p>Delivering your cravings to your doorstep.</p>
+            </div>
+
+            <!-- Social Media Links Section -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+           
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 FreshEats. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>
